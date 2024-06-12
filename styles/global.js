@@ -1,0 +1,220 @@
+import { StyleSheet, Touchable, Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
+
+export const globalStyles = StyleSheet.create({
+
+  container: {
+    paddingBottom: 5,
+    paddingHorizontal: 25,
+    marginVertical: 0,
+    marginHorizontal: 0,
+    backgroundColor: "#e8e8e8",
+  },
+  cardContainer: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: "center",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 1
+  },
+  img: {
+    width: "100%",
+    height: height * 0.2,
+    resizeMode: "stretch",
+    marginBottom: 7,
+    borderRadius: 12,
+  },
+  card: {
+    backgroundColor: "#4b9b81",
+    width: width * 0.4,
+    height: height * 0.087,
+    justifyContent: "center",
+    alignItems: "center",
+    display: 'flex',
+    gap: 5,
+    borderRadius: 12,
+    marginBottom: 5,
+    elevation: 5,
+  },
+  cardTitle: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "900",
+  },
+  headerIcon: {
+    fontSize: 35,
+    color: "gray",
+    backgroundColor: "#e8e8e8",
+    marginRight: 20,
+    padding: 5,
+    borderRadius: 100,
+  },
+  logo: {
+    fontSize: 30,
+    color: "white",
+    paddingVertical: 0,
+    marginBottom: 0
+  },
+  // ==================================================================
+  safe: {
+    flex: 1,
+    paddingBottom: 150,
+    paddingHorizontal: 25,
+    backgroundColor: "#e8e8e8",
+  },
+  touchable: {
+    flex: 1,
+    height: "100%",
+    width: "100%",
+  },
+  containerAnimated: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  cardAnimated: {
+    position: "absolute",
+    backfaceVisibility: "hidden",
+    width: width * 0.8,
+    height: height * 0.65,
+    borderRadius: 22,
+    elevation: 5,
+  },
+  cardImg: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "stretch",
+    borderRadius: 22,
+  },
+  front: {
+    zIndex: 1,
+  },
+  back: {
+    zIndex: -1,
+  },
+  // =================================================================
+  webContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 0,
+    margin: 0,
+    backgroundColor: "#e8e8e8",
+  },
+  webView: {
+    width: width * 1,
+  },
+  //   ==================================================================
+  profileContainer: {
+    flex: 1,
+    justifyContent: "start",
+    alignItems: "center",
+    padding: 20,
+    backgroundColor: "#e8e8e8",
+  },
+  profileCard: {
+    width: "100%",
+    marginBottom: 5,
+    padding: 10,
+    paddingLeft: 20,
+    flexDirection: "row",
+    alignItems: 'center',
+    backgroundColor: "#4b9b81",
+    borderRadius: 10,
+  },
+  profileImg: {
+    fontSize: 35,
+    color: "white",
+    padding: 10,
+    marginRight: 20,
+    borderRadius: 100,
+  },
+  profileIcon: {
+    fontSize: 35,
+    color: "#4b9b81",
+    padding: 10,
+    marginRight: 20,
+    borderRadius: 100,
+  },
+  profileLocation: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    padding: 10,
+    width: "100%",
+    borderStyle: "solid",
+    borderColor: "gray",
+    borderWidth: .5,
+    marginBottom: 5,
+  },
+  profileCardLocation: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "start",
+    alignItems: "center",
+    paddingLeft: 10,
+  },
+  profileLanguage: {
+    borderRadius: 10,
+    borderStyle: "solid",
+    borderColor: "gray",
+    borderWidth: .5,
+    width: "100%",
+    backgroundColor: "#fff",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 10,
+    marginBottom: 10,
+    paddingLeft: 25,
+  },
+  profileLangCard: {
+    width: "70%",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  profileTitleLang: {
+    fontSize: 14,
+    fontWeight: "900",
+    color: "black",
+    alignSelf: "center",
+  },
+  profileTextLang: {
+    fontSize: 14,
+    fontWeight: "900",
+    color: "black",
+    borderStyle: "solid",
+    borderColor: "#4b9b81",
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
+    alignSelf: "center",
+  },
+  profileLogout: {
+    width: "100%",
+    marginBottom: 20,
+    padding: 15,
+    paddingLeft: 20,
+    flexDirection: "row",
+    backgroundColor: "#df2020",
+    borderRadius: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  profileTitleLogout: {
+    fontSize: 14,
+    fontWeight: "800",
+    color: "white",
+  },
+
+  profileTitle: {
+    fontSize: 14,
+    fontWeight: "800",
+    color: "black",
+  },
+  profileText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "black",
+  },
+});
