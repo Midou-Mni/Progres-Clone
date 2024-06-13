@@ -1,4 +1,4 @@
-import { StyleSheet, Touchable, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
@@ -10,14 +10,16 @@ export const globalStyles = StyleSheet.create({
     marginVertical: 0,
     marginHorizontal: 0,
     backgroundColor: "#e8e8e8",
-  },
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    },
   cardContainer: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 1
   },
   img: {
     width: "100%",
@@ -32,8 +34,6 @@ export const globalStyles = StyleSheet.create({
     height: height * 0.087,
     justifyContent: "center",
     alignItems: "center",
-    display: 'flex',
-    gap: 5,
     borderRadius: 12,
     marginBottom: 5,
     elevation: 5,
@@ -52,15 +52,13 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 100,
   },
   logo: {
-    fontSize: 30,
+    fontSize: 25,
     color: "white",
-    paddingVertical: 0,
-    marginBottom: 0
   },
   // ==================================================================
   safe: {
     flex: 1,
-    paddingBottom: 150,
+    paddingBottom: 5,
     paddingHorizontal: 25,
     backgroundColor: "#e8e8e8",
   },
@@ -116,11 +114,10 @@ export const globalStyles = StyleSheet.create({
   },
   profileCard: {
     width: "100%",
-    marginBottom: 5,
+    marginBottom:5,
     padding: 10,
     paddingLeft: 20,
     flexDirection: "row",
-    alignItems: 'center',
     backgroundColor: "#4b9b81",
     borderRadius: 10,
   },
