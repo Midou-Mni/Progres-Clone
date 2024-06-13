@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image } from "react-native";
+import { View,Image } from "react-native";
 import { globalStyles } from "../styles/global";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Animated, {
@@ -36,12 +36,12 @@ function Cards() {
   };
 
   const onGestureEvent = (event) => {
-    const { translationX } = event.nativeEvent;
-    if (translationX > 50) {
-      handleFlip("right");
-    } else if (translationX < -50) {
-      handleFlip("left");
-    }
+    const { translationX  } = event.nativeEvent;
+      if (translationX > 50) {
+        handleFlip("right");
+      } else if (translationX < -50) {
+        handleFlip("left");
+      }
   };
 
   return (
