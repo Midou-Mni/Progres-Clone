@@ -173,7 +173,7 @@ export const globalStyles = StyleSheet.create({
   profileTitleLang: {
     fontSize: 14,
     fontWeight: "900",
-    color: "black",
+    color: "gray",
     alignSelf: "center",
   },
   profileTextLang: {
@@ -205,13 +205,18 @@ export const globalStyles = StyleSheet.create({
   },
 
   profileTitle: {
-    fontSize: 14,
-    fontWeight: "800",
-    color: "black",
+    fontSize: 15,
+    fontWeight: "900",
+    color: "white",
   },
   profileText: {
-    fontSize: 10,
+    fontSize: 12,
     fontWeight: "700",
+    color: "white",
+  },
+  profileText2: {
+    fontSize: 12,
+    fontWeight: "400",
     color: "black",
   },
 });
