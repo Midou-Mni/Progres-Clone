@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
 import { globalStyles } from "../styles/global";
 
@@ -6,13 +7,34 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
 function Profile() {
+  const [name, setName] = useState("");
+  const [university, setUniversity] = useState("");
+  const [placeOfBirth, setPlaceOfBirth] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
+
+  useEffect(() => {
+    const fetchName = async () => {
+        const response = await fetch("http://localhost:5000/get-name");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setName(data.name);
+        setUniversity(data.university);
+        setPlaceOfBirth(data.placeOfBirth);
+        setDateOfBirth(data.dateOfBirth);
+    };
+
+    fetchName();
+  }, []);
+  
   return (
     <View style={globalStyles.profileContainer}>
       <View style={globalStyles.profileCard}>
         <Ionicons name="person" style={globalStyles.profileImg} />
         <View>
-          <Text style={globalStyles.profileTitle}>Student Name</Text>
-          <Text style={globalStyles.profileText}>University Name</Text>
+          <Text style={globalStyles.profileTitle}>{name}</Text>
+          <Text style={globalStyles.profileText}>University of {university}</Text>
         </View>
       </View>
 
@@ -20,18 +42,19 @@ function Profile() {
         <View style={globalStyles.profileCardLocation}>
           <Ionicons name="location-outline" style={globalStyles.profileIcon} />
           <View>
-            <Text style={globalStyles.profileTitle}>Place of Birth</Text>
-            <Text style={globalStyles.profileText}>*****</Text>
+            <Text style={globalStyles.profileTitleLang}>Place of Birth</Text>
+            <Text style={globalStyles.profileText2}>{placeOfBirth}</Text>
           </View>
         </View>
 
         <View style={globalStyles.profileCardLocation}>
           <MaterialCommunityIcons
-            name="calendar-month-outline" style={globalStyles.profileIcon}
+            name="calendar-month-outline"
+            style={globalStyles.profileIcon}
           />
           <View>
-            <Text style={globalStyles.profileTitle}>Date of Birth</Text>
-            <Text style={globalStyles.profileText}>////-//-//</Text>
+            <Text style={globalStyles.profileTitleLang}>Date of Birth</Text>
+            <Text style={globalStyles.profileText2}>{dateOfBirth}</Text>
           </View>
         </View>
       </View>
