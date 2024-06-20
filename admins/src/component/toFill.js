@@ -9,7 +9,7 @@ function ToFill() {
 
   useEffect(() => {
     const fetchName = async () => {
-      const response = await fetch("http://192.168.1.4:5000/get-name");
+      const response = await fetch("http://localhost:5000/get-name");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
