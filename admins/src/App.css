@@ -1,0 +1,136 @@
+/* ==================== App ======================= */
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5bc0a0;
+}
+.placeAndDate {
+    width: 100%;
+    display: flex;
+} 
+
+.form {
+    width: 100vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px -5px black;
+    padding: 10px;
+    background: #fff;
+}
+section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 30px;
+}
+p{
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+    font-weight: 600;
+}
+input{
+    width: 39vh;
+    height: 5vh;
+    border: none;
+    border-bottom: 1px solid #5bc0a0;
+    padding: 0;
+    margin: 0;
+    margin-inline: 2vh;
+    padding-left: 1vh;
+    color: #236b54;
+    font-size: 1.8vh;
+}
+input:focus {
+    outline: none;
+}
+input::placeholder {
+    color: #236b54;
+    font-size: 1.8vh;
+}
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background: #5bc0a0;
+    font-size: 1.7vh;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+/* ==================================================== */
+.allData{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #5bc0a0;
+}
+.data{
+    width: 90%;
+    border-radius: 10px;
+    padding: 3vh;
+    background: #f1f1f1;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: #236b54 1px solid;
+    padding-bottom: 3vh;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3vh;
+}
+.group {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3vh;
+}
+.fieldContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3vh;
+}
+.field {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 3vh;
+}
+/* ===================================================== */
+.fill{
+    margin-top: 2vh;
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 3vh;
+}
