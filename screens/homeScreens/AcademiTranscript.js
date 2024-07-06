@@ -3,27 +3,27 @@ import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { style } from "./StyleHomeScreens/style";
 
 function AcademicTranscript() {
-  const [avgModule1, setAvgModule1] = useState("");
-  const [avgModule2, setAvgModule2] = useState("");
-  const [avgModule3, setAvgModule3] = useState("");
-  const [avgModule4, setAvgModule4] = useState("");
-  const [avgModule5, setAvgModule5] = useState("");
+  const [avgModule1, setAvgModule1] = useState("0");
+  const [avgModule2, setAvgModule2] = useState("0");
+  const [avgModule3, setAvgModule3] = useState("0");
+  const [avgModule4, setAvgModule4] = useState("0");
+  const [avgModule5, setAvgModule5] = useState("0");
 
   const [average, setAverage] = useState(null);
 
   useEffect(() => {
     const fetchTranscript = async () => {
-      const response = await fetch("http://192.168.1.2:5000/get-assessment");
+      const response = await fetch("http://localhost:5000/get-assessment");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      setAvgModule1(data.avgModule1);
-      setAvgModule2(data.avgModule2);
-      setAvgModule3(data.avgModule3);
-      setAvgModule4(data.avgModule4);
-      setAvgModule5(data.avgModule5);
-      setAverage(data.average);
+      setAvgModule1(data.avgModule1 || "/");
+      setAvgModule2(data.avgModule2 || "/");
+      setAvgModule3(data.avgModule3 || "/");
+      setAvgModule4(data.avgModule4 || "/");
+      setAvgModule5(data.avgModule5 || "/");
+      setAverage(data.average || "00.00");
     };
 
     fetchTranscript();
