@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Assessment from "./studentComponent/Assessment";
+import Majors from "./studentComponent/Majors";
 
 function ToFill() {
   const [field, setField] = useState("");
@@ -23,6 +25,21 @@ function ToFill() {
 
     fetchName();
   }, []);
+
+  const [showAssessment, setShowAssessment] = useState(true);
+  const [showMajors, setShowMajors] = useState(false);
+
+  const handleShowAssessment = () => {
+    setShowAssessment(true);
+    setShowMajors(false);
+  };
+
+ 
+  const handleShowMajors = () => {
+    setShowMajors(true);
+    setShowAssessment(false);
+  };
+
   return (
     <div className="fill">
       <header>
@@ -32,15 +49,24 @@ function ToFill() {
         <p>Section: {section}</p>
         <p>Group: {group}</p>
       </header>
+
       <div className="btns">
-        <button onClick={() => alert("Fill Modules soon")}>Fill Modules</button>
-        <button onClick={() => alert("Fill Time Table soon")}>Time Table</button>
-        <button onClick={() => alert("Fill Exam Schedule soon")}>Exam schedule</button>
-        <button onClick={() => alert("Fill Exam Grades soon")}>Exam Grades</button>
-        <button onClick={() => alert("Fill Assessment soon")}>Assessment</button>
-        <button onClick={() => alert("Fill Percentage soon")}>Percentage</button>
+        <button onClick={handleShowMajors}>Add Majors</button>
+        <button onClick={() => alert("Fill Time Table soon")}>
+          Time Table
+        </button>
+        <button onClick={() => alert("Fill Exam Schedule soon")}>
+          Exam schedule
+        </button>
+        <button onClick={handleShowAssessment}>Assessment</button>
+        <button onClick={() => alert("Fill Percentage soon")}>
+          Percentage
+        </button>
       </div>
-    </div>
+       
+      <div className="AssessmentCore">{showAssessment && <Assessment />}</div>
+      <div className="MajorsCore">{showMajors && <Majors />}</div>
+  </div>
   );
 }
 
