@@ -3,11 +3,11 @@ import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { style } from "./StyleHomeScreens/style";
 
 function ExamenGrade() {
-  const [examModule1, setExamModule1] = useState("");
-  const [examModule2, setExamModule2] = useState("");
-  const [examModule3, setExamModule3] = useState("");
-  const [examModule4, setExamModule4] = useState("");
-  const [examModule5, setExamModule5] = useState("");
+  const [examModule1, setExamModule1] = useState("0");
+  const [examModule2, setExamModule2] = useState("0");
+  const [examModule3, setExamModule3] = useState("0");
+  const [examModule4, setExamModule4] = useState("0");
+  const [examModule5, setExamModule5] = useState("0");
 
   useEffect(() => {
     const fetchExam = async () => {
@@ -16,11 +16,11 @@ function ExamenGrade() {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      setExamModule1(data.examModule1);
-      setExamModule2(data.examModule2);
-      setExamModule3(data.examModule3);
-      setExamModule4(data.examModule4);
-      setExamModule5(data.examModule5);
+        setExamModule1(data.examModule1 || "/");
+        setExamModule2(data.examModule2 || "/");
+        setExamModule3(data.examModule3 || "/");
+        setExamModule4(data.examModule4 || "/");
+        setExamModule5(data.examModule5 || "/");
     };
 
     fetchExam();
