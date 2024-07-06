@@ -1,136 +1,209 @@
 /* ==================== App ======================= */
 .App {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #5bc0a0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5bc0a0;
 }
 .placeAndDate {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 } 
 
 .form {
-    width: 100vh;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 25px -5px black;
-    padding: 10px;
-    background: #fff;
+  width: 100vh;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -5px black;
+  padding: 10px;
+  background: #fff;
 }
 section {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-    background: #fff;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1%;
+  margin-bottom: 3%;
 }
 p{
-    padding: 0;
-    margin: 0;
-    font-size: medium;
-    font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-size: medium;
+  font-weight: 600;
+  margin-bottom: 1vh;
 }
 input{
-    width: 39vh;
-    height: 5vh;
-    border: none;
-    border-bottom: 1px solid #5bc0a0;
-    padding: 0;
-    margin: 0;
-    margin-inline: 2vh;
-    padding-left: 1vh;
-    color: #236b54;
-    font-size: 1.8vh;
+  width: 39vh;
+  height: 5vh;
+  border: none;
+  border-bottom: 1px solid #5bc0a0;
+  padding: 0;
+  margin: 0;
+  padding-left: 1vh;
+  color: #236b54;
+  font-size: 1.8vh;
 }
 input:focus {
-    outline: none;
+  outline: none;
 }
 input::placeholder {
-    color: #236b54;
-    font-size: 1.8vh;
+  color: #236b54;
+  font-size: 1.8vh;
 }
 button {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    background: #5bc0a0;
-    font-size: 1.7vh;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
+  width: 15vh;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  background: #5bc0a0;
+  font-size: 1.7vh;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
 }
 /* ==================================================== */
 .allData{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #5bc0a0;
+  width: 100%;
+  height: auto;
+  min-height: 97vh;
+  padding-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #5bc0a0;
 }
 .data{
-    width: 90%;
-    border-radius: 10px;
-    padding: 3vh;
-    background: #f1f1f1;
+  width: 90%;
+  border-radius: 10px;
+  padding: 3vh;
+  background: #f1f1f1;
 }
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    border-bottom: #236b54 1px solid;
-    padding-bottom: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: #236b54 1px solid;
+  padding-bottom: 3vh;
 }
 .details{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 3vh;
 }
 .group {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 3vh;
 }
 .fieldContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 3vh;
 }
 .field {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 3vh;
 }
 /* ===================================================== */
 .fill{
-    margin-top: 2vh;
+  margin-top: 2vh;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .btns{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 3vh;
+}
+
+/* ====================================================== */
+/* =============== Assessment =============== */
+.AssessmentCore{
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Assessment{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 3%;
+  background: #d4ebe3;
+}
+.Assessment section{
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0vh;
+}
+.td{
+  border-right: .3vh solid #236b54;
+}
+.exam{
+  border-left: .3vh solid #236b54;
+}
+.Assessment h1{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2vh;
+  text-decoration: solid underline #236b54;
+}
+.Assessment form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+.Assessment form div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+.Assessment form label{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+.Assessment form button{
+  align-items: center;
+  justify-content: center;
+}
+.input{
+  width: 20vh;
 }
