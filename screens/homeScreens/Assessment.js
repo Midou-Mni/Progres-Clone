@@ -4,15 +4,13 @@ import { style } from "./StyleHomeScreens/style";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 function Assessment() {
-  const [grade, setGrade] = useState("");
-
-  const [module1, setModule1] = useState("");
-  const [module2, setModule2] = useState("");
-  const [module3, setModule3] = useState("");
-  const [module4, setModule4] = useState("");
-  const [module5, setModule5] = useState("");
-  const [tpModule1, setTpModule1] = useState("");
-  const [tpModule2, setTpModule2] = useState("");
+  const [module1, setModule1] = useState("0");
+  const [module2, setModule2] = useState("0");
+  const [module3, setModule3] = useState("0");
+  const [module4, setModule4] = useState("0");
+  const [module5, setModule5] = useState("0");
+  const [tpModule1, setTpModule1] = useState("0");
+  const [tpModule2, setTpModule2] = useState("0");
 
   useEffect(() => {
     const fetchAssessment = async () => {
