@@ -102,7 +102,7 @@ function Assessment() {
 
   return (
     <div className="Assessment">
-      <section className="td">
+      <section>
         <h1>TD's: </h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -166,7 +166,7 @@ function Assessment() {
         </form>
       </section>
 
-      <section className="tp">
+      <section>
         <h1>TP's: </h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -196,7 +196,7 @@ function Assessment() {
         </form>
       </section>
 
-      <section className="exam">
+      <section>
         <h1>Exams: </h1>
         <form onSubmit={handleSubmit}>
           <div>
