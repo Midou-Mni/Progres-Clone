@@ -12,7 +12,7 @@ function File() {
 
   useEffect(() => {
     const fetchName = async () => {
-      const response = await fetch("http://localhost:5000/get-name");
+      const response = await fetch("http://192.168.1.6:5000/get-name");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -36,16 +36,26 @@ function File() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:5000/send-details", {
+    const response = await fetch("http://localhost:5000/send-name", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ section, group, field, year, semester }),
+      body: JSON.stringify({
+        name,
+        university,
+        placeOfBirth,
+        dateOfBirth,
+        section,
+        group,
+        field,
+        year,
+        semester,
+      }),
     });
     const data = await response.json();
     if (data.success) {
-      console.log("sent successfully");
+      console.log("details sent successfully");
       console.log(data);
       setSubmitted(true);
     }
@@ -56,13 +66,20 @@ function File() {
   return (
     <div>
       <div className="allData">
-        <h1>Student Details</h1>
         <div className="data">
           <header>
-            <p>Name: {name}</p>
-            <p>University Of: {university}</p>
-            <p>Place of Birth: {placeOfBirth}</p>
-            <p>Date of Birth: {dateOfBirth}</p>
+            <p>
+              Name: <strong>{name}</strong>
+            </p>
+            <p>
+              University Of: <strong>{university}</strong>
+            </p>
+            <p>
+              Place of Birth: <strong>{placeOfBirth}</strong>
+            </p>
+            <p>
+              Date of Birth: <strong>{dateOfBirth}</strong>
+            </p>
           </header>
           {Submitted ? (
             <ToFill />
