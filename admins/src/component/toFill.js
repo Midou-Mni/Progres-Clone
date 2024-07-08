@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Assessment from "./studentComponent/Assessment";
-import Majors from "./studentComponent/Majors";
 
 function ToFill() {
   const [field, setField] = useState("");
@@ -11,7 +10,7 @@ function ToFill() {
 
   useEffect(() => {
     const fetchName = async () => {
-      const response = await fetch("http://localhost:5000/get-name");
+      const response = await fetch("http://192.168.1.6:5000/get-name");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -26,32 +25,23 @@ function ToFill() {
     fetchName();
   }, []);
 
-  const [showAssessment, setShowAssessment] = useState(true);
-  const [showMajors, setShowMajors] = useState(false);
+  const [showAssessment, setShowAssessment] = useState(false);
 
   const handleShowAssessment = () => {
-    setShowAssessment(true);
-    setShowMajors(false);
-  };
-
- 
-  const handleShowMajors = () => {
-    setShowMajors(true);
-    setShowAssessment(false);
+    setShowAssessment((prev) => !prev);
   };
 
   return (
     <div className="fill">
       <header>
-        <p>Field: {field}</p>
-        <p>Year: {year}</p>
-        <p>Semester: {semester}</p>
-        <p>Section: {section}</p>
-        <p>Group: {group}</p>
+        <p>Field: <strong>{field}</strong></p>
+        <p>Year: <strong>{year}</strong></p>
+        <p>Semester: <strong>{semester}</strong></p>
+        <p>Section: <strong>{section}</strong></p>
+        <p>Group: <strong>{group}</strong></p>
       </header>
 
       <div className="btns">
-        <button onClick={handleShowMajors}>Add Majors</button>
         <button onClick={() => alert("Fill Time Table soon")}>
           Time Table
         </button>
@@ -65,7 +55,6 @@ function ToFill() {
       </div>
        
       <div className="AssessmentCore">{showAssessment && <Assessment />}</div>
-      <div className="MajorsCore">{showMajors && <Majors />}</div>
   </div>
   );
 }
