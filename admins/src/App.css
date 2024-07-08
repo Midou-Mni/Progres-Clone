@@ -1,7 +1,15 @@
 /* ==================== App ======================= */
+.ALL {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #5bc0a0;
+}
 .App {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
+  padding-bottom: 0vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +27,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 10px;
   box-shadow: 0px 0px 25px -5px black;
   padding: 10px;
@@ -72,18 +84,16 @@ button {
 }
 /* ==================================================== */
 .allData{
-  width: 100%;
-  height: auto;
-  min-height: 97vh;
-  padding-bottom: 3vh;
+  width: 160vh;
+  min-height: 85vh;
+  padding-bottom: 7vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #5bc0a0;
 }
 .data{
-  width: 90%;
+  width: 100%;
   border-radius: 10px;
   padding: 3vh;
   background: #f1f1f1;
@@ -167,12 +177,6 @@ header{
   align-items: center;
   border-radius: 0vh;
 }
-.td{
-  border-right: .3vh solid #236b54;
-}
-.exam{
-  border-left: .3vh solid #236b54;
-}
 .Assessment h1{
   margin: 0;
   padding: 0;
@@ -205,5 +209,5 @@ header{
   justify-content: center;
 }
 .input{
-  width: 20vh;
+  width: 25vh;
 }
