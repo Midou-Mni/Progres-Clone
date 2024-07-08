@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Modules from "./Modules";
+import { FaDeleteLeft } from "react-icons/fa6";
+import { IoBagAdd } from "react-icons/io5";
 
 function Majors() {
   const [majors, setMajors] = useState([]);
@@ -9,7 +11,7 @@ function Majors() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (newMajor.trim() !== "") {
-      setMajors([...majors, { name: newMajor , modules: [] }]);
+      setMajors([...majors, { name: newMajor, modules: [] }]);
       setNewMajor("");
     }
   };
@@ -36,35 +38,61 @@ function Majors() {
   };
 
   return (
-    <div>
-      <h1>Majors</h1>
+    <div className="w-[80%] h-fit p-[3vh] mt-[15vh] flex flex-col items-center bg-emerald-50 rounded-2xl drop-shadow-2xl ">
+      <h1 className="text-center font-bold text-[3.5vh] mb-[5vh]">
+        New Majors
+      </h1>
 
-      <input
-        type="text"
-        placeholder="Add a Major"
-        value={newMajor}
-        onChange={(e) => setNewMajor(e.target.value)}
-      />
-      <button onClick={handleSubmit}>Submit</button>
-      <button onClick={handleDelete}>Delete</button>
+      <div className="flex justify-around items-center w-[100%] mt-[3vh] mb-[3vh]">
+        <input
+          type="text"
+          placeholder="Add a Major"
+          value={newMajor}
+          onChange={(e) => setNewMajor(e.target.value)}
+        />
+        <div className="w-[30%] flex justify-between">
+          <button
+            className="w-[12.5vh] bg-teal-400 hover:bg-teal-500 font-bold py-2 px-4 rounded flex justify-between items-center"
+            onClick={handleSubmit}
+          >
+            <IoBagAdd size="1.5rem" />
+            Add
+          </button>
+          <button
+            className="w-[12.5vh] bg-red-400 hover:bg-red-500 font-bold py-2 px-4 rounded flex justify-between items-center"
+            onClick={handleDelete}
+          >
+            Delete
+            <FaDeleteLeft size="2.6vh" color="white" />
+          </button>
+        </div>
+      </div>
 
-      <ul>
+      <div className="w-[90%] ml-[7vh] my-[5vh] flex flex-wrap gap-3 items-center ">
         {majors.map((major, index) => (
-          <li key={index}>
-            <button onClick={() => handleSelectMajor(major)}>
+          <div
+            key={index}
+            className="w-[30%] h-[6vh] flex justify-center items-center"
+          >
+            <button
+              className="w-[60%] h-[6vh] bg-teal-400 hover:bg-teal-500 font-bold py-2 px-4 rounded flex justify-around items-center"
+              onClick={() => handleSelectMajor(major)}
+            >
               {major.name}
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
 
-      {selectedMajor && (
-        <Modules
-          major={selectedMajor}
-          onAddModule={handleAddModule}
-          onClose={() => setSelectedMajor(null)}
-        />
-      )}
+      <div className=" w-[100%] px-[5vh] my-[5vh] flex justify-center">
+        {selectedMajor && (
+          <Modules
+            major={selectedMajor}
+            onAddModule={handleAddModule}
+            onClose={() => setSelectedMajor(null)}
+          />
+        )}
+      </div>
     </div>
   );
 }
