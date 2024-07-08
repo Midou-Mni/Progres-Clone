@@ -13,11 +13,23 @@ let university = "";
 let placeOfBirth = "";
 let dateOfBirth = "";
 
+let field = "";
+let year = "";
+let semester = "";
+let section = "";
+let group = "";
+
 app.post("/send-name", (req, res) => {
   name = req.body.name;
   university = req.body.university;
   placeOfBirth = req.body.placeOfBirth;
   dateOfBirth = req.body.dateOfBirth;
+
+  field = req.body.field;
+  year = req.body.year;
+  semester = req.body.semester;
+  section = req.body.section;
+  group = req.body.group;
   res.send({
     success: true,
     message: "Name received successfully",
@@ -25,6 +37,11 @@ app.post("/send-name", (req, res) => {
     university,
     placeOfBirth,
     dateOfBirth,
+    field,
+    year,
+    semester,
+    section,
+    group,
   });
 });
 
@@ -43,33 +60,6 @@ app.get("/get-name", (req, res) => {
 });
 
 // =====================================================
-let field = "";
-let year = "";
-let semester = "";
-let section = "";
-let group = "";
-
-app.post("/send-details", (req, res) => {
-  field = req.body.field;
-  year = req.body.year;
-  semester = req.body.semester;
-  section = req.body.section;
-  group = req.body.group;
-  res.send({
-    success: true,
-    message: "Details received successfully",
-    field,
-    year,
-    semester,
-    section,
-    group,
-  });
-});
-
-app.get("/get-details", (req, res) => {
-  res.send({ section, group, field, year, semester });
-});
-
 // ============================================================
 let module1 = "";
 let module2 = "";
@@ -156,12 +146,12 @@ app.get("/get-assessment", (req, res) => {
     examModule3,
     examModule4,
     examModule5,
-    avgModule1, 
+    avgModule1,
     avgModule2,
     avgModule3,
     avgModule4,
     avgModule5,
-    average
+    average,
   });
 });
 
