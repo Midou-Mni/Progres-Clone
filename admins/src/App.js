@@ -17,7 +17,7 @@ function App() {
         showMajors={showMajors}
         setShowMajors={setShowMajors}
       />
-      <div className="w-full flex justify-center pb-[10vh]">
+      <div className="flex justify-center pb-[10vh]">
         {showAddStudent && <NewStudent />}
         {showMajors && <Majors />}
       </div>
